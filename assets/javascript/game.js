@@ -1,28 +1,42 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
     var characters = ['obiWan', 'luke', 'sidious', 'maul'];
 
     $('.obiWan').click( function() {
         // when obiWan is selected, move him to Your Character div
-        // $('#selectedCharacter').addClass('obiWan');
-        $('.obiWan').prependTo('#yourCharacter');
+        $('.obiWan').prependTo('#selectedCharacter');
+        $('.obiWan').removeClass('characterImage');
         
         var yourCharacter = this;
         console.log(this);
 
+        // move Luke to enemies section and give him a red enemy border
         $('.luke').prependTo('.enemyImageLuke');
+        $('.luke').removeClass('characterImage');
+        $('.luke').addClass('enemyImage');
+        // move Sidious to enemies section and give him a red enemy border
         $('.sidious').prependTo('.enemyImageSidious');
+        $('.sidious').removeClass('characterImage');
+        $('.sidious').addClass('enemyImage');
+        // move Maul to enemies section and give him a red enemy border
         $('.maul').prependTo('.enemyImageMaul');
-        
+        $('.maul').removeClass('characterImage');
+        $('.maul').addClass('enemyImage');
+
+        // hide the characters section
+        $('.characters').addClass('hide');
+    
+    // close funtion for obiWan below
     });
 
     $('.luke').click( function() {
         // when luke is selected, move him to Your Character div
-        $('#selectedCharacter').addClass('luke');
-        $('#selectedCharacter').appendTo('yourCharacter');
+        $('.luke').prependTo('#selectedCharacter');
         
         var yourCharacter = this;
         console.log(this);
+    
+    // close function for luke below
     });
 
     $('.sidious').click( function() {
