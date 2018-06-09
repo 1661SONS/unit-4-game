@@ -25,6 +25,7 @@ $(document).ready(function() {
 
         // hide the characters section
         $('.characters').addClass('hide');
+        .off("click");
     
     // close funtion for obiWan below
     });
@@ -32,9 +33,26 @@ $(document).ready(function() {
     $('.luke').click( function() {
         // when luke is selected, move him to Your Character div
         $('.luke').prependTo('#selectedCharacter');
+        $('.luke').removeClass('characterImage');
         
         var yourCharacter = this;
         console.log(this);
+
+        // move Luke to enemies section and give him a red enemy border
+        $('.obiWan').prependTo('.enemyImageLuke');
+        $('.obiWan').removeClass('characterImage');
+        $('.obiWan').addClass('enemyImage');
+        // move Sidious to enemies section and give him a red enemy border
+        $('.sidious').prependTo('.enemyImageSidious');
+        $('.sidious').removeClass('characterImage');
+        $('.sidious').addClass('enemyImage');
+        // move Maul to enemies section and give him a red enemy border
+        $('.maul').prependTo('.enemyImageMaul');
+        $('.maul').removeClass('characterImage');
+        $('.maul').addClass('enemyImage');
+
+        // hide the characters section
+        $('.characters').addClass('hide');
     
     // close function for luke below
     });
