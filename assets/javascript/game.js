@@ -11,43 +11,42 @@ $(document).ready(function() {
         console.log(this);
 
         // move Luke to enemies section and give him a red enemy border
-        $('.luke').prependTo('.enemyImageLuke');
+        $('.luke').appendTo('.enemyImageLuke');
         $('.luke').removeClass('characterImage');
         $('.luke').addClass('enemyImage');
         // move Sidious to enemies section and give him a red enemy border
-        $('.sidious').prependTo('.enemyImageSidious');
+        $('.sidious').appendTo('.enemyImageSidious');
         $('.sidious').removeClass('characterImage');
         $('.sidious').addClass('enemyImage');
         // move Maul to enemies section and give him a red enemy border
-        $('.maul').prependTo('.enemyImageMaul');
+        $('.maul').appendTo('.enemyImageMaul');
         $('.maul').removeClass('characterImage');
         $('.maul').addClass('enemyImage');
 
         // hide the characters section
         $('.characters').addClass('hide');
-        .off("click");
     
     // close funtion for obiWan below
     });
 
     $('.luke').click( function() {
         // when luke is selected, move him to Your Character div
-        $('.luke').prependTo('#selectedCharacter');
+        $('.luke').appendTo('#selectedCharacter');
         $('.luke').removeClass('characterImage');
         
         var yourCharacter = this;
         console.log(this);
 
         // move Luke to enemies section and give him a red enemy border
-        $('.obiWan').prependTo('.enemyImageLuke');
+        $('.obiWan').appendTo('.enemyImageLuke');
         $('.obiWan').removeClass('characterImage');
         $('.obiWan').addClass('enemyImage');
         // move Sidious to enemies section and give him a red enemy border
-        $('.sidious').prependTo('.enemyImageSidious');
+        $('.sidious').appendTo('.enemyImageSidious');
         $('.sidious').removeClass('characterImage');
         $('.sidious').addClass('enemyImage');
         // move Maul to enemies section and give him a red enemy border
-        $('.maul').prependTo('.enemyImageMaul');
+        $('.maul').appendTo('.enemyImageMaul');
         $('.maul').removeClass('characterImage');
         $('.maul').addClass('enemyImage');
 
