@@ -16,19 +16,9 @@ p {
     font-size: 1.4rem;
     color: white;
 }
-.offender {
-    color: #00ffc5;
-}
-#chosenOffender p {
-    text-align: center;
-    font-size: 1.1rem;
-}
 .col-md-6 {
     padding-top: 1rem;
     margin-bottom: 0;
-}
-.yourCharacter {
-    color: #00ffc5;
 }
 .btn:hover {
     text-decoration: underline;
@@ -44,41 +34,38 @@ p {
 ************************************************************/
 .characterImage {
     border: 0.15rem solid white;
-    /* position: relative; */
+    height: 10rem;
+    background-size: cover;
+    background-position: center;
 }
 .characterImage p, .enemyImage p {
-    /* not sure why this style doesn't work for #chosenOffender p */
     text-align: center;
     font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 8rem;
 }
+.yourCharacter, .offender {
+    /* color: #00ffc5; */
+}
 #chosenOffender {
     border: 0.25rem solid #00ffc5;
 }
+#chosenOffender p {
+    text-align: center;
+    font-size: 1.1rem;
+}
 .obiWan {
     background-image: url(../images/obi-wan.jpg);
-    background-position: center;
-    height: 10rem;
-    background-size: cover;
 }
 .luke {
     background-image: url(../images/luke.jpeg);
     background-position: top;
-    height: 10rem;
-    background-size: cover;
 }
 .sidious {
     background-image: url(../images/sidious.jpg);
-    background-position: center;
-    height: 10rem;
-    background-size: cover;
 }
 .maul {
     background-image: url(../images/maul-2.jpg);
-    background-position: center;
-    height: 10rem;
-    background-size: cover;
 }
 
 
@@ -93,9 +80,10 @@ p {
 }
 .defender {
     margin-top: 1rem;
+    /* color: #3e75fd; */
 }
-.defenderImage {
-    border: 0.25rem solid black;
+#chosenDefender {
+    border: 0.25rem solid #3e75fd;
 }
 
 /* ATTACK INFO STYLES 
