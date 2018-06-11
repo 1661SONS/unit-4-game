@@ -54,13 +54,13 @@ $(document).ready(function() {
             $('.obiWan, .luke, .sidious').appendTo('.enemyCharacters').addClass('enemyImage');
         });
     }
+    // HOW DO I IGNORE THIS FUNCTION WHEN ONE OF THE CHARACTERS IS CLICKED AGAIN? 
     chooseOffender();
 
     function chooseDefender() {
 
         // when Obi-Wan is clicked, make him the Defender
         $('.obiWan').click( function() {
-            // STOP THE CHOOSEOFFENDER FUNCTION HERE!
             
             defender = characters[0];
             console.log("the defender is " + defender);
@@ -96,7 +96,6 @@ $(document).ready(function() {
         });
     }
     chooseDefender();
-        
 
 
 
