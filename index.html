@@ -23,90 +23,74 @@
 </head>
 <body>
 
-    <h1>Star Wars RPG</h1>
-    <p>Select a character below to begin!</p>
-    
     <div class="container">
-        <!-- player one to be selected by user -->
-        <div class="row characters">
+        <div class="row">
+            <h1 class="col-md-4">Star Wars RPG</h1>
+            <p class="col-md-6">Choose a character to begin!</p>
+        </div>
+
+        <!-- characters to choose an offender from -->
+        <div class="row">
             <div class="col-md-3">
                 <div class="characterImage obiWan">
-                    <p>Obi-Wan Kenobi</p>
-                    <p class="hp">Health: 120</p>
+                    <p>Obi-Wan Kenobi<br>Health: 120</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="characterImage luke">
-                    <p>Luke Skywalker</p>
-                    <p class="hp">Health: 100</p>
+                    <p>Luke Skywalker<br>Health: 100</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="characterImage sidious">
-                    <p>Darth Sidious</p>
-                    <p class="hp">Health: 150</p>
+                    <p>Darth Sidious<br>Health: 150</p>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="characterImage maul">
-                    <p>Darth Maul</p>
-                    <p class="hp">Health: 180</p>
+                    <p>Darth Maul<br>Health: 180</p>
                 </div>
             </div>
-            <!-- closing row div below -->
         </div>
 
-        <div class="row yourCharacter">
-            <div class="md-2">
-                <h2>Your Character</h2>
-                <div id="selectedCharacter"></div>
+        <!-- the user's chosen offender -->
+        <h3 class="offender">Your Character</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="chosenOffender"></div>
             </div>
-            
-            <!-- closing row div below -->
         </div>
 
-        <!-- enemies (hidden on default)-->
-        <div class="row enemies">
-        <h2>Enemies Available to Attack</h2>
-            <div class="col-md-2">
-                <div class="enemyImageObiWan">
-                    <!-- <p>Obi-Wan Kenobi</p>
-                    <p class="hp">Health: 120</p> -->
-                </div>
+        <!-- the user's chosen defender -->
+        <h3 class="defender">Defender</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="chosenDefender"></div>
             </div>
-            <div class="col-md-2">
-                <div class="enemyImageLuke">
-                    <!-- <p>Luke Skywalker</p>
-                    <p class="hp">Health: 100</p> -->
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="enemyImageSidious">
-                    <!-- <p>Darth Sidious</p>
-                    <p class="hp">Health: 150</p> -->
-                </div>
-            </div>
-            <div class="col-md-2">
-                <div class="enemyImageMaul">
-                    <!-- <p>Darth Maul</p>
-                    <p class="hp">Health: 180</p> -->
-                </div>
-            </div>
-
-            <!-- closing row div below -->
         </div>
 
+        <!-- enemies to choose a defender from -->
+        <div class="row">
+            <h3 class="enemies col-md-4">Enemies</h3>
+            <p class="col-md-6">Choose a Defender to attack!</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="enemyCharacters"></div>
+            </div>
+        </div>
 
-        <!-- close container div below -->
+        
+   
+   
+   
+   
+   
+   
+   
+   
+    <!-- close container div below -->
     </div>
- 
-    
-
-
-
-
-
-
     <!-- custom javascript game.js file -->
     <script src="assets/javascript/game.js"></script>
 </body>

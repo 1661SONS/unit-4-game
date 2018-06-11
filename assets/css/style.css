@@ -4,16 +4,26 @@
 body {
     background-color: black;
     font-family: 'PT Mono', monospace;
-    /* background-image: url(../images/deathstar-background.jpg); */
     background-image: url(../images/star-wars-bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: lightgrey;
 }
 h1 {
     font-weight: 700;
 }
-.yourCharacter h2 {
+.offender {
+    color: #00ffc5;
+}
+p {
+    font-size: 1.4rem;
+    color: white;
+}
+.col-md-6 {
+    padding-top: 1rem;
+    margin-bottom: 0;
+}
+.yourCharacter {
     color: #00ffc5;
 }
 .btn:hover {
@@ -29,10 +39,18 @@ h1 {
 /* CHARACTER STYLES 
 ************************************************************/
 .characterImage {
-    border: 5px solid white;
+    border: 0.15rem solid white;
+    /* position: relative; */
 }
-#selectedCharacter {
-    border: 5px solid #00ffc5;
+.characterImage p, .enemyImage p, #chosenOffender p {
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    /* position: absolute; */
+    bottom: 10px;
+}
+#chosenOffender {
+    border: 0.25rem solid #00ffc5;
 }
 .obiWan {
     background-image: url(../images/obi-wan.png);
@@ -41,7 +59,7 @@ h1 {
     background-size: cover;
 }
 .luke {
-    background-image: url(../images/luke-2.jpg);
+    background-image: url(../images/luke.jpg);
     background-position: top;
     height: 10rem;
     background-size: cover;
@@ -54,17 +72,20 @@ h1 {
 }
 .maul {
     background-image: url(../images/maul.png);
-    /* fix this */
     background-position: right;
     height: 10rem;
     background-size: cover;
 }
 
-/* ENEMIES STYLES 
+
+/* ENEMY & DEFENDER STYLES 
 ************************************************************/
 .enemies {
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 .enemyImage {
-    border: 5px solid #fd683e;
+    border: 0.25rem solid #fd683e;
+}
+.defenderImage {
+    border: 0.25rem solid black;
 }

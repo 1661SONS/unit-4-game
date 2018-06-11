@@ -1,78 +1,80 @@
 $(document).ready(function() {
 
-    var characters = ['obiWan', 'luke', 'sidious', 'maul'];
+    var characters = ['obi-wan', 'luke', 'sidious', 'maul'];
+    var offender;
+    var defender;
 
     $('.obiWan').click( function() {
-        // when obiWan is selected, move him to Your Character div
-        $('.obiWan').prependTo('#selectedCharacter');
-        $('.obiWan').removeClass('characterImage');
+        // set the offender to Obi-Wan
+        offender = characters[0];
+        console.log("your character is " + offender);
         
-        var yourCharacter = this;
-        console.log(this);
+        // when obiWan is selected, move him to Your Character div
+        $('.obiWan').appendTo('#chosenOffender');
+        $('.obiWan').removeClass('characterImage');
 
-        // move Luke to enemies section and give him a red enemy border
-        $('.luke').appendTo('.enemyImageLuke');
-        $('.luke').removeClass('characterImage');
-        $('.luke').addClass('enemyImage');
-        // move Sidious to enemies section and give him a red enemy border
-        $('.sidious').appendTo('.enemyImageSidious');
-        $('.sidious').removeClass('characterImage');
-        $('.sidious').addClass('enemyImage');
-        // move Maul to enemies section and give him a red enemy border
-        $('.maul').appendTo('.enemyImageMaul');
-        $('.maul').removeClass('characterImage');
-        $('.maul').addClass('enemyImage');
-
-        // hide the characters section
-        $('.characters').addClass('hide');
-    
-    // close funtion for obiWan below
+        // move all other characters to enemies section and give them a red border
+        $('.luke, .sidious, .maul').appendTo('.enemyCharacters');
+        $('.luke, .sidious, .maul').removeClass('characterImage');
+        $('.luke, .sidious, .maul').addClass('enemyImage');
     });
 
     $('.luke').click( function() {
-        // when luke is selected, move him to Your Character div
-        $('.luke').appendTo('#selectedCharacter');
-        $('.luke').removeClass('characterImage');
+        // set the offender to Luke
+        offender = characters[1];
+        console.log("your character is " + offender);
         
-        var yourCharacter = this;
-        console.log(this);
+        // when luke is selected, move him to Your Character div
+        $('.luke').appendTo('#chosenOffender');
+        $('.luke').removeClass('characterImage');
 
-        // move Luke to enemies section and give him a red enemy border
-        $('.obiWan').appendTo('.enemyImageLuke');
-        $('.obiWan').removeClass('characterImage');
-        $('.obiWan').addClass('enemyImage');
-        // move Sidious to enemies section and give him a red enemy border
-        $('.sidious').appendTo('.enemyImageSidious');
-        $('.sidious').removeClass('characterImage');
-        $('.sidious').addClass('enemyImage');
-        // move Maul to enemies section and give him a red enemy border
-        $('.maul').appendTo('.enemyImageMaul');
-        $('.maul').removeClass('characterImage');
-        $('.maul').addClass('enemyImage');
-
-        // hide the characters section
-        $('.characters').addClass('hide');
-    
-    // close function for luke below
+        // move all other characters to enemies section and give them a red border
+        $('.obiWan, .sidious, .maul').appendTo('.enemyCharacters');
+        $('.obiWan, .sidious, .maul').removeClass('characterImage');
+        $('.obiWan, .sidious, .maul').addClass('enemyImage');
     });
 
     $('.sidious').click( function() {
-        // when sidious is clicked, move him to Your Character div
-        $('#selectedCharacter').addClass('sidious');
-        $('#selectedCharacter').appendTo('yourCharacter');
+        // set offender to Sidious
+        offender = characters[2];
+        console.log("your character is " + offender);
+        
+        // when Luke is selected, move him to Your Character div
+        $('.sidious').appendTo('#chosenOffender');
+        $('.sidious').removeClass('characterImage');
 
-        var yourCharacter = this;
-        console.log(this);
+        // move all other characters to enemies section and give them a red border
+        $('.obiWan, .luke, .maul').appendTo('.enemyCharacters');
+        $('.obiWan, .luke, .maul').removeClass('characterImage');
+        $('.obiWan, .luke, .maul').addClass('enemyImage');
     });
 
     $('.maul').click( function(){
-        // when maul is clicked, move him to Your Character div
-        $('#selectedCharacter').addClass('maul');
-        $('#selectedCharacter').appendTo('yourCharacter');
+        // set yourCharacter to Sidious
+        offender = characters[2];
+        console.log("your character is " + offender);
+        
+        // when Maul is selected, move him to Your Character div
+        $('.maul').appendTo('#chosenOffender');
+        $('.maul').removeClass('characterImage');
 
-        var yourCharacter = this;
-        console.log(this);
+        // move all other characters to enemies section and give them a red border
+        $('.obiWan, .luke, .sidious').appendTo('.enemyCharacters');
+        $('.obiWan, .luke, .sidious').removeClass('characterImage');
+        $('.obiWan, .luke, .sidious').addClass('enemyImage');
     });
+
+    // if the offender is not Obi-Wan, that means Obi-Wan is an ememy
+    if (offender != characters[0]) {
+        // when Obi-Wan is clicked, make him the Defender
+        $('.obiWan').click( function() {
+            defender = characters[0];
+            console.log(defender);
+
+        
+        });
+        
+    }
 
 
 
