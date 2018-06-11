@@ -1,8 +1,49 @@
 $(document).ready(function() {
 
     var characters = ['obi-wan', 'luke', 'sidious', 'maul'];
+    
+    function chooseDefender() {
+
+        var defender;
+    
+        // when Obi-Wan is clicked, make him the Defender
+        $('.obiWan').click( function() {
+            defender = characters[0];
+            console.log("the defender is " + defender);
+    
+            $('.obiWan').appendTo('#chosenDefender');
+        });
+    
+        // when Luke is clicked, make him the defender
+        $('.luke').click( function() {
+            defender = characters[1];
+            console.log("the defender is " + defender);
+    
+            $('.luke').appendTo('#chosenDefender');
+        
+        });
+    
+        // when Luke is clicked, make him the defender
+        $('.sidious').click( function(){
+            defender = characters[2];
+            console.log("the defender is " + defender);
+    
+            $('.sidious').appendTo('#chosenDefender');
+    
+        });
+    
+        // when Maul is clicked, make him the defender
+        $('.maul').click( function(){
+            defender = characters[3];
+            console.log("the defender is " + defender);
+    
+            $('.maul').appendTo('#chosenDefender');
+    
+        });
+    }
+    chooseDefender();
+
     var offender;
-    var defender;
 
     function chooseOffender() {
 
@@ -54,48 +95,8 @@ $(document).ready(function() {
             $('.obiWan, .luke, .sidious').appendTo('.enemyCharacters').addClass('enemyImage');
         });
     }
-    // HOW DO I IGNORE THIS FUNCTION WHEN ONE OF THE CHARACTERS IS CLICKED AGAIN? 
     chooseOffender();
 
-    function chooseDefender() {
-
-        // when Obi-Wan is clicked, make him the Defender
-        $('.obiWan').click( function() {
-            
-            defender = characters[0];
-            console.log("the defender is " + defender);
-
-            $('.obiWan').appendTo('#chosenDefender');
-        });
-
-        // when Luke is clicked, make him the defender
-        $('.luke').click( function() {
-            defender = characters[1];
-            console.log("the defender is " + defender);
-
-            $('.luke').appendTo('#chosenDefender');
-        
-        });
-
-        // when Luke is clicked, make him the defender
-        $('.sidious').click( function(){
-            defender = characters[2];
-            console.log("the defender is " + defender);
-
-            $('.sidious').appendTo('#chosenDefender');
-
-        });
-
-        // when Maul is clicked, make him the defender
-        $('.maul').click( function(){
-            defender = characters[3];
-            console.log("the defender is " + defender);
-
-            $('.maul').appendTo('#chosenDefender');
-
-        });
-    }
-    chooseDefender();
 
 
 
