@@ -12,12 +12,16 @@ body {
 h1 {
     font-weight: 700;
 }
-.offender {
-    color: #00ffc5;
-}
 p {
     font-size: 1.4rem;
     color: white;
+}
+.offender {
+    color: #00ffc5;
+}
+#chosenOffender p {
+    text-align: center;
+    font-size: 1.1rem;
 }
 .col-md-6 {
     padding-top: 1rem;
@@ -42,37 +46,37 @@ p {
     border: 0.15rem solid white;
     /* position: relative; */
 }
-.characterImage p, .enemyImage p, #chosenOffender p {
+.characterImage p, .enemyImage p {
+    /* not sure why this style doesn't work for #chosenOffender p */
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.75);
-    /* position: absolute; */
-    bottom: 10px;
+    margin-top: 8rem;
 }
 #chosenOffender {
     border: 0.25rem solid #00ffc5;
 }
 .obiWan {
-    background-image: url(../images/obi-wan.png);
+    background-image: url(../images/obi-wan.jpg);
     background-position: center;
     height: 10rem;
     background-size: cover;
 }
 .luke {
-    background-image: url(../images/luke.jpg);
+    background-image: url(../images/luke.jpeg);
     background-position: top;
     height: 10rem;
     background-size: cover;
 }
 .sidious {
-    background-image: url(../images/sidious.png);
+    background-image: url(../images/sidious.jpg);
     background-position: center;
     height: 10rem;
     background-size: cover;
 }
 .maul {
-    background-image: url(../images/maul.png);
-    background-position: right;
+    background-image: url(../images/maul-2.jpg);
+    background-position: center;
     height: 10rem;
     background-size: cover;
 }
@@ -82,10 +86,23 @@ p {
 ************************************************************/
 .enemies {
     margin-top: 1rem;
+    color: #fc0c50;
 }
 .enemyImage {
-    border: 0.25rem solid #fd683e;
+    border: 0.25rem solid #fc0c50;
+}
+.defender {
+    margin-top: 1rem;
 }
 .defenderImage {
     border: 0.25rem solid black;
+}
+
+/* ATTACK INFO STYLES 
+************************************************************/
+.offenderAttack {
+    color: #00ffc5;
+}
+.defenderAttack {
+    /* color: #fc0c50; */
 }
