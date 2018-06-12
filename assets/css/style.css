@@ -20,6 +20,9 @@ p {
     padding-top: 1rem;
     margin-bottom: 0;
 }
+.btn {
+    margin-bottom: 1rem;
+}
 .btn:hover {
     text-decoration: underline;
 }
@@ -32,6 +35,9 @@ p {
 
 /* CHARACTER STYLES 
 ************************************************************/
+.offender {
+    margin-top: 1rem;
+}
 .characterImage {
     border: 0.15rem solid white;
     height: 10rem;
@@ -43,9 +49,6 @@ p {
     font-size: 1.1rem;
     background-color: rgba(0, 0, 0, 0.75);
     margin-top: 8rem;
-}
-.yourCharacter, .offender {
-    /* color: #00ffc5; */
 }
 #chosenOffender {
     border: 0.25rem solid #00ffc5;

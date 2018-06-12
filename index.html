@@ -58,11 +58,12 @@
         <div class="row">
             <div class="col-md-4">
                 <div id="chosenOffender"></div>
-                <button class="btn btn-primary">Attack</button>
             </div>
-            <div class="col-md-4">
-                <p class="offenderAttack">You attacked Luke Skywalker for 000 damage</p>
-                <p class="defenderAttack">Luke Skywalker attacked you for 000 damage</p>
+            <div class="col-md-6 attackSection">
+                <button class="btn btn-primary">Attack</button>
+                <!-- <p class="noDefender">Choose a Defender first!</p> -->
+                <p class="offenderAttack">You attacked Luke Skywalker for <span id="offenderDamage">000</span> damage</p>
+                <p class="defenderAttack">Luke Skywalker attacked you for <span id="defenderDamage">000</span> damage</p>
             </div>
         </div>
 
@@ -80,19 +81,11 @@
             <p class="col-md-6">Choose a Defender to attack!</p>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="enemyCharacters"></div>
-            </div>
+            <div class="col-md-4 enemyObiWan"></div>
+            <div class="col-md-4 enemyLuke"></div>
+            <div class="col-md-4 enemySidious"></div>
+            <div class="col-md-4 enemyMaul"></div>
         </div>
-
-        
-   
-   
-   
-   
-   
-   
-   
    
     <!-- close container div below -->
     </div>
