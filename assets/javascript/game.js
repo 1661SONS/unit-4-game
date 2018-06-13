@@ -71,6 +71,7 @@ $(document).ready( function() {
             $('.maul').appendTo('.enemyMaul').addClass('enemyImage');
             
             $('.enemyObiWan').detach();
+            // $('.luke, .sidious, .maul').off( "click");
         });
 
         $('.luke').click( function() {
@@ -129,7 +130,7 @@ $(document).ready( function() {
 
     // 2. create attacking functions to dynamically change health points and attackSection data.
 
-
+    // name all anonymous click functions within click functions and use .off() to turn off the click event for the remaining characters so that they don't get appended to the offender div after one has already been selected
 
 
 
