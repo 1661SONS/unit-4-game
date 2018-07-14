@@ -85,7 +85,7 @@ p {
     margin-top: 1rem;
     /* color: #3e75fd; */
 }
-#chosenDefender {
+.chosenDefender {
     border: 0.25rem solid #3e75fd;
 }
 

@@ -6,6 +6,10 @@ $(document).ready( function() {
     var offenderDamage = $('#offenderDamage').text(0);
     var defenderDamage = $('#defenderDamage').text(0);
 
+    var obiWanOffender;
+    var lukeOffender;
+    var sidiousOffender;
+    var maulOffender;
 
     // $('.noDefender, .offenderAttack, .defenderAttack').addClass('hide');
     
@@ -15,48 +19,12 @@ $(document).ready( function() {
 
         });
     }
+     
     
-    
-    function chooseDefender() {
-    
-        // when Obi-Wan is clicked, make him the Defender
-        $('.obiWan').click( function() {
-            defender = characters[0];
-            console.log("the defender is " + defender);
-    
-            $('.enemyobiWan').appendTo('#chosenDefender');
-        });
-    
-        // when Luke is clicked, make him the defender
-        $('.luke').click( function() {
-            defender = characters[1];
-            console.log("the defender is " + defender);
-    
-            $('.enemyLuke').appendTo('#chosenDefender');
-        });
-    
-        // when Luke is clicked, make him the defender
-        $('.sidious').click( function() {
-            defender = characters[2];
-            console.log("the defender is " + defender);
-    
-            $('.enemySidious').appendTo('#chosenDefender');
-        });
-    
-        // when Maul is clicked, make him the defender
-        $('.maul').click( function(){
-
-            defender = characters[3];
-            console.log("the defender is " + defender);
-    
-            $('.enemyMaul').appendTo('#chosenDefender');
-        });
-    }
    
-
    function chooseOffender() {
 
-        $('.obiWan').click( function() {
+        obiWanOffender = $('.obiWan').click( function() {
             // set the offender to Obi-Wan
             offender = characters[0];
             console.log("your character is " + offender);
@@ -72,7 +40,7 @@ $(document).ready( function() {
             $('.enemyObiWan').detach();
         });
            
-        $('.luke').click( function() {
+        lukeOffender = $('.luke').click( function() {
             // set the offender to Luke
             offender = characters[1];
             console.log("your character is " + offender);
@@ -88,7 +56,7 @@ $(document).ready( function() {
             $('.enemyLuke').detach();
         });
         
-        $('.sidious').click( function() {
+        sidiousOffender = $('.sidious').click( function() {
             // set offender to Sidious
             offender = characters[2];
             console.log("your character is " + offender);
@@ -105,8 +73,7 @@ $(document).ready( function() {
             $('.enemySidious').detach();
         });
             
-        $('.maul').click( function(){
-
+        maulOffender = $('.maul').click( function(){
             // set yourCharacter to Sidious
             offender = characters[2];
             console.log("your character is " + offender);
@@ -122,6 +89,48 @@ $(document).ready( function() {
             $('.enemyMaul').detach();
         });
     }
+
+
+    function chooseDefender() {
+        // when Obi-Wan is clicked, make him the Defender
+        $('.obiWan').click( function() {
+            defender = characters[0];
+            console.log("the defender is " + defender);
+    
+            $('.enemyobiWan').appendTo('#chosenDefender');
+            stop(lukeOffender, sidiousOffender, maulOffender);
+        });
+    
+        // when Luke is clicked, make him the defender
+        $('.luke').click( function() {
+            defender = characters[1];
+            console.log("the defender is " + defender);
+    
+            $('.enemyLuke').appendTo('#chosenDefender');
+            stop(obiWanOffender, sidiousOffender, maulOffender);
+        });
+    
+        // when Luke is clicked, make him the defender
+        $('.sidious').click( function() {
+            defender = characters[2];
+            console.log("the defender is " + defender);
+    
+            $('.enemySidious').appendTo('#chosenDefender');
+            stop(obiWanOffender, lukeOffender, maulOffender);
+        });
+    
+        // when Maul is clicked, make him the defender
+        $('.maul').click( function(){
+
+            defender = characters[3];
+            console.log("the defender is " + defender);
+    
+            $('.enemyMaul').appendTo('#chosenDefender');
+            stop(obiWanOffender, lukeOffender, sidiousOffender);
+        });
+    }
+
+
    chooseDefender();
    chooseOffender();
     
@@ -134,12 +143,7 @@ $(document).ready( function() {
     // 2. create attacking functions using offender and defender variables to dynamically change health points and render on attackSection div in html
 
    
-
-
-
-
-
-    // luke attacks in factors of 5? when is chosen offender
+// luke attacks in factors of 5? when is chosen offender
     // obi-wan attacks in factors of 8 when is chosen offender
     // maul attacks for 25
     // sidious attacks for 20
